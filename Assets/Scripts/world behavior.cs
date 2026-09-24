@@ -37,7 +37,9 @@ public class worldbehavior : MonoBehaviour
     {
         Debug.Log("Hit an Object");
         if (collision.gameObject.tag == "spike")
-        { health--; }
+        {
+            health--;
+        }
 
         if (collision.gameObject.tag == "coin")
         {

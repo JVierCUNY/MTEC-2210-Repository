@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class wasd : MonoBehaviour
 {
 
-    public float speed = 0.2f;
+    public float speed = 0.02f;
     public float accel = 3f;
     public bool grounded = false;
     public Vector2 direction;

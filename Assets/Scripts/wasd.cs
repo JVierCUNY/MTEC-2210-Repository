@@ -4,12 +4,12 @@ using UnityEngine.InputSystem;
 public class wasd : MonoBehaviour
 {
 
-    public float speed = 0.3f;
-    public float accel = 300f;
-    public float accelTime = .3f;
+    public float speed = 0.2f;
+    public float accel = 3f;
     public bool grounded = false;
     public Vector2 direction;
-    public Rigidbody2D littleGuy; 
+    public Rigidbody2D littleGuy;
+    public float ascend = 300f;
 
     //we could declare keys as vars here
 
@@ -71,7 +71,7 @@ void FixedUpdate()
 {
     if (Keyboard.current.spaceKey.isPressed && grounded)
     {
-        littleGuy.AddForce(Vector2.up * accel);
+        littleGuy.AddForce(Vector2.up * ascend);
     }
 }
 void OnCollisionStay2D(Collision2D collision)

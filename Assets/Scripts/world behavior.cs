@@ -8,6 +8,7 @@ public class worldbehavior : MonoBehaviour
     public float score = 0;
     public float timer = 0;
     public GameObject coin;
+    public wasd playerScript;
 
     public string startText = "Hello, World!";
     // Start is called once before the first execution of Update after the MonoBehaviour is created   
@@ -21,7 +22,10 @@ public class worldbehavior : MonoBehaviour
     void Update()
     {
         if (health <= 0)
-        { playerSprite.color = Color.red; }
+        { playerSprite.color = Color.red;
+            playerScript.enabled = false;  
+        }
+        
 
         timer += Time.deltaTime;
         if (timer > 3f)

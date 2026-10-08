@@ -5,11 +5,11 @@ public class wasd : MonoBehaviour
 {
 
     public float speed = 0.02f;
-    public float accel = 3f;
+    public float accel = 2f;
     public bool grounded = false;
     public Vector2 direction;
     public Rigidbody2D littleGuy;
-    public float ascend = 300f;
+    public float ascend = 360f;
 
     //we could declare keys as vars here
 

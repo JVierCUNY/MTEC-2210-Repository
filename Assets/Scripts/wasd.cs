@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class wasd : MonoBehaviour
 {
 
-    public float speed = 0.02f;
+    public float speed = 8f;
     public float accel = 2f;
     public bool grounded = false;
     public Vector2 direction;
@@ -39,11 +39,11 @@ public class wasd : MonoBehaviour
         //}
         if (Keyboard.current.aKey.isPressed)
         {
-            direction += Vector2.left * speed;
+            direction += Vector2.left * speed * Time.deltaTime;
         }
         if (Keyboard.current.dKey.isPressed)
         {
-            direction += Vector2.right * speed;
+            direction += Vector2.right * speed * Time.deltaTime;
         }
 
         transform.Translate(direction);
